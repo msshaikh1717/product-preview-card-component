@@ -4,7 +4,7 @@
 
   font-family: "Montserrat", sans-serif;
   box-sizing: border-box;
-  font-size: 14px;
+  font-size: 0.85rem;
 }
 
 body {
@@ -24,6 +24,10 @@ body {
   width: 37%;
 }
 
+#mobileImg {
+  display: none;
+}
+
 img {
   height: 100%;
   border-radius: 0.5rem 0 0 0.5rem;
@@ -40,7 +44,6 @@ img {
   border-radius: 0 0.5rem 0.5rem 0;
 }
 
-#perfume,
 #details {
   color: hsl(228, 12%, 48%);
   font-size: 0.8rem;
@@ -49,12 +52,16 @@ img {
 
 #perfume {
   text-transform: full-width;
+  font-weight: 500;
+  font-size: 0.7rem;
+  color: hsl(228, 12%, 48%);
 }
 
 h1 {
   font-family: "Fraunces", serif;
-  font-size: 1.8rem;
+  font-size: 1.9rem;
   margin: 1rem 0;
+  font-weight: 700;
 }
 
 #details {
@@ -70,7 +77,7 @@ h1 {
 
 #newPrc {
   color: hsl(158, 36%, 37%);
-  font-size: 1.8rem;
+  font-size: 2rem;
   font-family: "Fraunces", serif;
   font-weight: 700;
 }
@@ -78,6 +85,8 @@ h1 {
 #oldPrc {
   font-size: 0.8rem;
   text-decoration: line-through;
+  color: hsl(228, 12%, 48%);
+  font-weight: 500;
 }
 
 button {
@@ -103,4 +112,75 @@ button img {
 button:hover {
   cursor: pointer;
   background-color: hsl(158, 42%, 18%);
+}
+
+@media screen and (max-width: 480px) {
+  .container {
+    flex-direction: column;
+    width: 100%;
+    padding: 1rem;
+  }
+
+  #desktopImg {
+    display: none;
+  }
+  #mobileImg {
+    display: block;
+    border-radius: 0.5rem 0.5rem 0 0;
+  }
+
+  .image {
+    width: 100%;
+    height: auto;
+  }
+
+  #mobileImg {
+    width: 100%;
+    object-fit: contain;
+  }
+
+  .description {
+    height: auto;
+    border-radius: 0 0 0.5rem 0.5rem;
+  }
+
+  h1 {
+    font-size: 2.3rem;
+  }
+
+  #details {
+    line-height: 1.7rem;
+    font-size: 1.08rem;
+  }
+
+  button {
+    height: 3.2rem;
+    font-size: 0.9rem;
+  }
+
+  button img {
+    width: 1.1rem;
+    height: auto;
+  }
+
+  #perfume {
+    font-size: 0.8rem;
+  }
+
+  #newPrc {
+    font-size: 2.4rem;
+  }
+
+  #oldPrc {
+    font-size: 1rem;
+  }
+
+  button {
+    height: 3.5rem;
+    font-size: 1rem;
+  }
+
+  button img {
+    width: 1.2rem;
+  }
 }
